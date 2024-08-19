@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mang (Array)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81ecfb3023732f0f867118c9fa7f7396a375938c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mang (Array)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mang (Array)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

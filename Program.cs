@@ -7,30 +7,30 @@ namespace Mang
 
         static void Main(string[] args)
         {
-            // Bước 1: Khai báo mảng kiểu int với kích thước 5 phần tử
-            int[] numbers = new int[5];
+            // Bước 1: Khai báo mảng chứa danh sách sinh viên
+            string[] students = { "Dong", "Cong", "Duc", "Han", "Quang", "Connor", "Ha", "Anh", "Tuan", "Thu" };
 
-            // Bước 2: Thêm giá trị vào mảng bằng cách chèn vào các vị trí
-            numbers[0] = 2;
-            numbers[1] = 5;
-            numbers[2] = 9;
-            numbers[3] = 6;
-            numbers[4] = 7;
+            // Bước 2: Khai báo biến lưu tên tìm kiếm và gán với giá trị nhập vào
+            Console.WriteLine("Dien ten sinh vien :");
+            string inputName = Console.ReadLine();
 
-            // Bước 3: In ra một vài giá trị của mảng
-            Console.WriteLine("Gia tri cua phan tu 0: " + numbers[0]);
-            Console.WriteLine("Gia tri cua phan tu 2: " + numbers[2]);
-            Console.WriteLine("Gia tri cua phan tu 3: " + numbers[3]);
-
-            // Bước 4: Tính tổng các phần tử của mảng
-            int total = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            // Bước 3: Duyệt mảng sinh viên đã khai báo, tìm phần tử có giá trị bằng với tên đã nhập vào
+            bool isExist = false;
+            for (int i = 0; i < students.Length; i++)
             {
-                total += numbers[i];
+                if (students[i].Equals(inputName, StringComparison.OrdinalIgnoreCase)) // So sánh không phân biệt chữ hoa/thường
+                {
+                    Console.WriteLine("Vi tri cua " + inputName + " trong danh sach  la: " + (i + 1));
+                    isExist = true;
+                    break;
+                }
             }
 
-            // In ra tổng các phần tử của mảng
-            Console.WriteLine("Tong cac phan tu cua mang : " + total);
+            // Nếu không tìm thấy tên trong danh sách
+            if (!isExist)
+            {
+                Console.WriteLine("Khong tim thay " + inputName + " trong danh sach.");
+            }
 
             // Giữ cửa sổ console mở để xem kết quả
             Console.ReadLine();
